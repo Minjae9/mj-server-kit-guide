@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="noindex">
+<title>디스코드로 켜고 끄는 내 게임 서버 — 사용 안내서 (초안)</title>
+<link rel="stylesheet" href="assets/guide.css">
+</head>
+<body>
+<div class="layout single">
+
+<main>
+<nav class="stepper" aria-label="진행 단계" data-ui><a class="home" href="index.html" aria-current="page">첫 화면</a><ol><li><a href="setup.html" data-steps="s2-1-1,s2-1-2,s2-1-3,s2-1-4,s3-1,s3-2,s3-3,s4-1-1,s4-1-2,s4-2-1,s4-2-2,s4-2-3,s5-1,s5-2,s5-3,s5-4,s6-1,s6-2,s6-3,s6-4,s7-1,s7-2,s7-3,s7-4"><span class="st-no">①</span><span class="st-name">설치 준비</span><span class="page-progress"></span></a></li><li><a href="install.html" data-steps="s8-1,s8-2,s8-3,s8-4,s8-5,s8-6,s9-1-1,s9-1-2,s9-2-1,s9-2-2,s9-2-3"><span class="st-no">②</span><span class="st-name">설치 당일</span><span class="page-progress"></span></a></li><li><a href="usage.html" data-steps="s10-1,s10-2,s10-3,s10-a-1,s10-a-2,s10-a-3"><span class="st-no">③</span><span class="st-name">사용법</span><span class="page-progress"></span></a></li><li><a href="info.html" data-steps="info-read"><span class="st-no">④</span><span class="st-name">요금·주의사항</span><span class="page-progress"></span></a></li></ol></nav>
+<h1>디스코드로 켜고 끄는 내 게임 서버 — 사용 안내서 (초안)</h1>
+<div class="intro" data-src="intro"><aside class="box box-note"><p>MJ Server Kit 고객용 안내서입니다. 지금 버전은 <strong>팰월드</strong> 서버 기준입니다.</p><p>초안 — 2026-11 작성. AWS·디스코드 화면은 바뀔 수 있어, 화면이 다르면 판매자에게 물어봐 주세요.</p><p><code>[사진 NN]</code> 자리에는 화면 사진이 들어갑니다.</p></aside></div>
+<ol class="flow" data-ui><li><strong>① 설치 준비</strong> — AWS 가입·요금 알림, 디스코드 역할·알림 채널·봇 만들기 (고객님 혼자, 미리)</li><li><strong>② 설치 당일</strong> — 판매자와 화면 공유로 설치 (20~30분)</li><li><strong>③ 사용</strong> — 디스코드에서 <code>/서버켜기</code> → 게임 접속</li></ol>
+<nav class="page-cards" aria-label="안내서 페이지" data-ui><a class="page-card" href="setup.html" data-steps="s2-1-1,s2-1-2,s2-1-3,s2-1-4,s3-1,s3-2,s3-3,s4-1-1,s4-1-2,s4-2-1,s4-2-2,s4-2-3,s5-1,s5-2,s5-3,s5-4,s6-1,s6-2,s6-3,s6-4,s7-1,s7-2,s7-3,s7-4"><span class="card-no">①</span><span class="card-body"><span class="card-title">설치 준비</span><span class="card-sub">고객님 혼자, 미리</span></span><span class="page-progress"></span></a><a class="page-card" href="install.html" data-steps="s8-1,s8-2,s8-3,s8-4,s8-5,s8-6,s9-1-1,s9-1-2,s9-2-1,s9-2-2,s9-2-3"><span class="card-no">②</span><span class="card-body"><span class="card-title">설치 당일</span><span class="card-sub">판매자와 화면 공유</span></span><span class="page-progress"></span></a><a class="page-card" href="usage.html" data-steps="s10-1,s10-2,s10-3,s10-a-1,s10-a-2,s10-a-3"><span class="card-no">③</span><span class="card-body"><span class="card-title">사용법</span><span class="card-sub">서버 켜기·끄기·설정·비밀번호</span></span><span class="page-progress"></span></a><a class="page-card" href="info.html" data-steps="info-read"><span class="card-no">④</span><span class="card-body"><span class="card-title">요금·주의사항</span><span class="card-sub">플랜·요금·문의·해지</span></span><span class="page-progress"></span></a></nav>
+<button class="reset" type="button" data-reset data-ui>체크 표시 모두 지우기</button>
+<section id="s0" class="chapter" data-src="s0"><h2>0. 이 안내서는</h2><p>친구들과 함께 쓰는 <strong>팰월드 전용 서버</strong>를 <strong>내 AWS 계정</strong>에 만들고, <strong>디스코드 채팅창에서 명령어로 켜고 끄는</strong> 방법을 설명합니다.</p><ul><li><strong>AWS</strong> — 아마존의 클라우드 서비스. 인터넷에 있는 컴퓨터를 빌려 쓰고, 쓴 만큼 요금을 냅니다.</li><li><strong>서버 요금은 내 AWS 계정에서 직접 결제</strong>됩니다. 판매자는 서버를 대신 운영하지 않고, 설치를 도와드린 뒤 넘겨 드립니다.</li><li>서버는 <strong>쓸 때만 켜고</strong>, 아무도 접속하지 않으면 <strong>저절로 꺼집니다</strong>. 꺼져 있는 동안은 요금이 거의 나오지 않습니다 (<a class="xref" href="info.html#s14">14절</a>).</li></ul><p><strong>누가 무엇을 하나요</strong></p><div class="table-wrap"><table><thead><tr><th scope="col">단계</th><th scope="col">하는 사람</th></tr></thead><tbody><tr><td>AWS 가입, 예산 알림 (2·3절)</td><td>고객님</td></tr><tr><td>디스코드 준비 — 역할·알림 채널·봇 만들기 (4~7절)</td><td>고객님</td></tr><tr><td>서버 설치 (8·9절)</td><td>판매자와 함께 (화면 공유)</td></tr><tr><td>서버 켜기·끄기·설정 (10~13절)</td><td>고객님과 친구들</td></tr><tr><td>고장·업데이트·이전</td><td>판매자에게 문의 (<a class="xref" href="info.html#s16">16절</a>)</td></tr></tbody></table></div></section>
+<nav class="pager" aria-label="이전·다음 페이지" data-ui><span></span><a class="next" href="setup.html"><span class="pg-dir">다음 →</span><span class="pg-name">① 설치 준비</span></a></nav>
+</main>
+</div>
+<script src="assets/guide.js"></script>
+</body>
+</html>
